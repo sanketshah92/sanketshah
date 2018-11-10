@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="feedData"
+            type="com.sanketshah.viewmodel.NewsFeedDataViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{feedData.feedImage}"
+            app:srcCompat="@drawable/no_image" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/titleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{feedData.feedTitle}"
+                tools:text="Lorem Ipsum is Dummy Text Generator" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/bodyTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@{feedData.feedDescription}"
+                tools:text="Lorem Ipsum is dummy Text Generator and it is generating demo text, Text is generated dummy." />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/_4sdp"
+            app:srcCompat="@drawable/ic_next" />
+    </LinearLayout>
+</layout>

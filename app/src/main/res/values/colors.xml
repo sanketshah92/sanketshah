@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="container_bg">#CBCBCB</color>
+    <color name="colorPrimary">#ec1f27</color>
+    <color name="colorPrimaryDark">#d31219</color>
+    <color name="colorAccent">#d5d5d5</color>
+</resources>
